@@ -102,7 +102,7 @@
               <!-- ======================= FORMULARIO =======================  -->
               <div class="pane" id="container-form">
                 <H3>Check-in</H3>
-                <form>
+                <form id="formulario-veiculos">
                   <div class="form-group">
                     <label>Placa</label>
                     <input type="text" class="form-control" placeholder="Placa do veículo" id="placa">
@@ -116,18 +116,18 @@
                     <input type="text" class="form-control" placeholder="Cor do veículo" id="cor">
                   </div>
 
-                  <select class="form-control">
+                  <select class="form-control" id="tipo" name="tipo" required>
 
-                    <option id="carro">Carro</option>
-                    <option>Moto</option>
-                    <option>Microonibus</option>
+                    <option value="carro">Carro</option>
+                    <option value="moto">Moto</option>
+                    <option value="microonibus">Microonibus</option>
 
                   </select>
                   <br>
                   <br>
                   <label>
                     <div class="form-actions">
-                      <button type="submit" class="btn btn-form btn-primary" id="btn-salvar">Salvar</button>
+                      <button type="submit" onclick="salvarDados" class="btn btn-form btn-primary" id="btn-salvar">Salvar</button>
                     </div>
                 </form>
 
@@ -148,7 +148,7 @@
               <div class="pane" id="container-tab">
 
                 <h3>Registros</h3>
-                <table class="table-striped" id="table-registers">
+                <table class="table-striped" id="tabelaVeiculos">
                   <thead>
                     <tr>
                       <th>Placa</th>
