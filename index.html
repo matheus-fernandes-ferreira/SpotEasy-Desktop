@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Photon</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/photon.css">
+
+  <!-- Electron Javascript -->
+  <!-- <script src="app.js" charset="utf-8"></script> -->
+
+  <!-- Evita ataques de Cross sites Scripting -->
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./main.js"></script>
+  <script defer src="./mscript.js"></script>
+</head>
+
+<body>
+  <div class="window">
+
+
+    <div class="window-content">
+      <!-- ======================= NAV SIDE BAR =======================  -->
+
+      <div class="pane-group">
+        <div class="pane-sm sidebar">
+          <div class="logo">
+            <h3>SpotEasy</h3>
+
+          </div>
+
+          <nav class="nav-group">
+            <h5 class="nav-group-title">Menu</h5>
+
+            <a class="nav-group-item">
+              <span class="icon icon-home"></span>
+              Início
+            </a>
+            <span class="nav-group-item active">
+              <span class="icon icon-book-open"></span>
+              Check-in/check-out
+            </span>
+            <span class="nav-group-item">
+              <span class="icon icon-folder"></span>
+              Veículos
+            </span>
+            <span class="nav-group-item">
+              <span class="icon icon-chart-bar"></span>
+              Relatórios
+            </span>
+            <span class="nav-group-item">
+              <span class="icon icon-cog"></span>
+              Configurações
+            </span>
+            <span class="nav-group-item">
+              <span class="icon icon-back"></span>
+              Logout
+            </span>
+        </div>
+
+
+        <!-- ======================= FIM NAV SIDE BAR =======================  -->
+        <div class="pane" id="pane-header">
+
+          <!-- ======================= HEADER =======================  -->
+
+          <header class="toolbar toolbar-header">
+            <h1 class="title">Dashboard em Tempo Real</h1>
+
+            <br>
+            <br>
+            <br>
+
+
+          </header>
+
+
+          <!-- ======================= FIM HEADER =======================  -->
+
+          <div class="pane" id="main-pane">
+
+            <div class="pane" id="pane-form">
+              <div class="tab-group">
+                <div class="tab-item active">
+                  <span class="icon icon-cancel icon-close-tab"></span>
+                  Check-in
+                </div>
+                <div class="tab-item">
+                  <span class="icon icon-cancel icon-close-tab"></span>
+                  Clientes
+                </div>
+                <div class="tab-item tab-item-fixed">
+                  <span class="icon icon-plus"></span>
+                </div>
+              </div>
+
+
+
+              <!-- ======================= FORMULARIO =======================  -->
+              <div class="pane" id="container-form">
+                <H3>Check-in</H3>
+                <form>
+                  <div class="form-group">
+                    <label>Placa</label>
+                    <input type="text" class="form-control" placeholder="Placa do veículo" id="placa">
+                  </div>
+                  <div class="form-group">
+                    <label>Modelo</label>
+                    <input type="text" class="form-control" placeholder="Modelo do veículo" id="modelo">
+                  </div>
+                  <div class="form-group">
+                    <label>Cor</label>
+                    <input type="text" class="form-control" placeholder="Cor do veículo" id="cor">
+                  </div>
+
+                  <select class="form-control">
+
+                    <option id="carro">Carro</option>
+                    <option>Moto</option>
+                    <option>Microonibus</option>
+
+                  </select>
+                  <br>
+                  <br>
+                  <label>
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-form btn-primary" id="btn-salvar">Salvar</button>
+                    </div>
+                </form>
+
+              </div>
+            </div>
+            <div class="pane">
+              <div class="tab-group">
+                <div class="tab-item">
+                  <span class="icon icon-cancel icon-close-tab"></span>
+                  Atual
+                </div>
+                <div class="tab-item active">
+                  <span class="icon icon-cancel icon-close-tab"></span>
+                  Histórico
+                </div>
+
+              </div>
+              <div class="pane" id="container-tab">
+
+                <h3>Registros</h3>
+                <table class="table-striped" id="table-registers">
+                  <thead>
+                    <tr>
+                      <th>Placa</th>
+                      <th>Modelo</th>
+                      <th>Cor</th>
+                      <th>Tipo de veículo</th>
+                      <th>Data</th>
+                      <th>Hora</th>
+                      <th>Nº da vaga</th>
+                      <th>Botões</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+
+
+                  </tbody>
+                </table>
+
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer class="toolbar toolbar-footer">
+      <h1 class="title">Desenvolvido por Matheus Fernandes</h1>
+    </footer>
+  </div>
+</body>
+
+<!-- You can also require other files to run in this process -->
+<script src="./renderer.js"></script>
+
+</html>

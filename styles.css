@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+.sidebar {
+    background-color: #40223B;
+}
+
+.logo h3 {
+    color: white;
+    margin: 1rem;
+}
+
+.toolbar-header {
+    border-bottom: 1px solid #c2c0c2;
+    background: #40223B;
+}
+
+.nav-group-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 50px;
+}
+
+
+.nav-group-item active {
+    color: white;
+}
+
+
+.nav-group-item:active,
+.nav-group-item.active {
+    background-color: #F08A32;
+}
+
+.nav-group-item .icon {
+    color: white;
+    padding: 00px 20px 10px 10px;
+}
+
+#pane-form {
+    flex: none;
+    width: 20%;
+}
+
+#container-form {
+    padding: 1rem;
+}
+
+#container-tab {
+    padding: 1rem;
+}
+
+thead {
+    background-color: #F08A32;
+}
+
+th {
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: rgba(240, 139, 50, 0.345)
+}
+
+.table-striped tr:nth-child(even):hover {
+    background-color: rgba(240, 139, 50, 0.345)
+}
+
+h3 {
+    margin: 0px;
+}
+
+#main-pane {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom, #40223B 0%, #5c3255 100%);
+}
+.btn-primary:Active{
+    background-color: #F08A32;
+    border-color: #F08A32;
+    border-bottom-color:#F08A32
+}
